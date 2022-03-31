@@ -3,3 +3,6 @@ tempMain : tempMain.cpp Money.o
 
 Money.o : Money.cpp Money.h
 	g++ Money.cpp -c
+
+clean :
+	rm tempMain *.o
