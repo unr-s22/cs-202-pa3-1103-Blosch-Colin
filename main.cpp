@@ -1,12 +1,13 @@
 #include "Money.h"
 #include "Account.h"
+#include <iostream>
 
 using namespace std;
 
-int main{
+int main(){
 
-	Money Money(300, 23)
-	Account account(Money)
+	Money Money(300, 23);
+	Account account(Money);
 	cout << account << endl;
 	account.deposit(Money(200,00));
 	account.deposit(Money(300,24));
@@ -26,6 +27,4 @@ int main{
 	cout << "Relations between " << Money << " <= " << account.balance() << ": " << (Money > account.balance()) << endl;
 	cout << "Relations between " << Money << " == " << account.balance() << ": " << (Money > account.balance()) << endl;
 	cout << "Relations between " << Money << " != " << account.balance() << ": " << (Money > account.balance()) << endl;
-
-	return 0;
 };
