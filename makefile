@@ -1,8 +1,14 @@
-tempMain : tempMain.cpp Money.o
-	g++ tempMain.cpp Money.o -o tempMain
+pa3: main.o Money.o Account.o
+	g++ -o pa3 main.o Money.o Account.o
 
-Money.o : Money.cpp Money.h
-	g++ Money.cpp -c
+main.o: main.cpp
+	g++ -c main.cpp
+
+Money.o: Money.cpp Money.h
+	g++ -c Money.cpp
+
+Account.o: Account.cpp Account.h
+	g++ -c Account.cpp
 
 clean :
-	rm tempMain *.o
+	rm *.o pa3

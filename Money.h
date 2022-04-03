@@ -1,3 +1,5 @@
+#ifndef MONEY_H
+#define MONEY_H
 #include <iostream>
 #include <string>
 using namespace std;
@@ -25,3 +27,5 @@ public:
     
     friend ostream& operator<<(ostream& os, const Money& m);
 };
+
+#endif
